@@ -1,0 +1,24 @@
+.header {
+  position: relative;
+  background: #fff;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  width: 100%;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+}
+
+.header .container img {
+  position: relative;
+  width: auto;
+  height: 60px;
+}
+
+.header .container span {
+  position: relative;
+  width: auto;
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 18px;
+  color: #111;
+}

@@ -1,0 +1,141 @@
+@media (max-width: 1450px) {
+  .main .container .sidebar {
+    width: 25%;
+    min-height: 150vh;
+  }
+}
+
+.main .container .sidebar {
+  position: relative;
+  width: 25%;
+  background: #222326;
+  background-repeat: repeat;
+}
+
+.sub_menu {
+  display: none;
+}
+
+.main .container .fl_left {
+  float: left;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.main .container .sidebar .menu_root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main .container .menu_root .menu_avatar {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-bottom: 0.5px solid #3a3a3a;
+}
+
+.main .container .menu_root .menu_avatar img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-top: 35px;
+  margin-left: 40%;
+  border-radius: 50%;
+}
+
+.main .container .menu_root ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main .container .menu_root ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-bottom: 0.5px solid #3a3a3a;
+}
+
+.main .container .menu_root ul li a {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  color: rgb(131, 131, 131);
+}
+
+.main .container .menu_root ul li a:hover,
+.main .container .menu_root ul li.active {
+  color: rgb(255, 255, 255);
+  background: rgb(42, 42, 42);
+}
+
+.main .container .menu_root ul li a:hover .color,
+.main .container .menu_root ul li.active .color {
+  background: #28a745 !important;
+}
+
+.main .container .menu_root ul li .color {
+  width: 2%;
+}
+
+@media (max-width: 1380px) {
+  .main .container .menu_root ul li .icon {
+    margin-left: 0;
+  }
+}
+
+.main .container .menu_root ul li .icon {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.main .container .menu_root ul li .icon img {
+  width: 20px;
+  height: auto;
+  opacity: 0.5;
+}
+
+@media (max-width: 1380px) {
+  .main .container .menu_root ul li .title {
+    padding: 0;
+  }
+}
+
+.main .container .menu_root ul li .title {
+  position: relative;
+  display: block;
+  padding: 0 5px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.main .container .menu_root ul li .fa1 {
+  position: relative;
+  height: 60px;
+  line-height: 55px;
+  margin-left: 25%;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+}
+
+.main .container .menu_root ul li .title_menu {
+  position: relative;
+  display: block;
+  padding: 0 4px;
+  height: 40px;
+  margin-left: 38%;
+  line-height: 40px;
+  text-align: start;
+  white-space: nowrap;
+}
