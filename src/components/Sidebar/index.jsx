@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 
 function Sidebar() {
+  const [active, setActive] = useState(false);
+  // let activeClass = "";
+
+  const handleClick = () => {
+    setActive(!active);
+    // activeClass = active ? "active" : "";
+    // alert(activeClass);
+  };
+
   return (
     <div className="navigation sidebar fl_left">
       <div className="menu_root">
@@ -13,9 +22,9 @@ function Sidebar() {
           />
         </div>
         <div>
-          <ul className="menu_list" load="toggleMenu()">
-            <li>
-              <a onclick="show_sub_menu()">
+          <ul className="menu_list">
+            <li onClick={handleClick} className={active ? "active" : ""}>
+              <a>
                 <span className="color"></span>
                 <span className="icon">
                   <img src="https://vn.elsaspeak.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/theme-page-user-new/icon_sidebar/icon_1.png.webp" />
@@ -31,13 +40,14 @@ function Sidebar() {
                   </NavLink>
                 </li>
                 <li>
-                  <a
+                  <NavLink
+                    to="/change-password"
                     id="info_acount_btn"
                     href="https://vn.elsaspeak.com/change-password/"
                   >
                     <span className="sub_color"></span>
                     <span className="title_menu">Thay Đổi Mật Khẩu</span>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </li>

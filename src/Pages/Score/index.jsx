@@ -10,6 +10,7 @@ function ScorePage() {
         <h3>Tiến độ</h3>
         <div class="core_lt">
           <img
+            height="650"
             src="https://vn.elsaspeak.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/theme-page-user-new/img_core/core (1).png.webp"
             alt=""
           />

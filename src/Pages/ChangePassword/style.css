@@ -1,0 +1,37 @@
+.form_edit .chil {
+  float: left;
+}
+.form_edit .Title {
+  font-weight: 600;
+  width: 25%;
+  color: #919496;
+  padding: 1em 1em 1em 0px;
+}
+
+.form_edit .btn_group .btn_cancle:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(229, 231, 244, 1) 0%,
+    rgba(212, 214, 226, 1) 53%,
+    rgba(196, 199, 219, 1) 100%
+  );
+}
+
+.form_edit .btn_group .btn_cancle {
+  background: linear-gradient(172.65deg, #fcfcfc -21.72%, #d4d6e2 85.53%);
+  color: #222326;
+}
+
+.form_edit .btn_group .btn_submit:hover {
+  background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%);
+  color: #fff;
+}
+.form_edit .btn_group .btn_submit {
+  margin-left: 6%;
+  background: linear-gradient(180deg, #29f4ff -46.11%, #5257ff 151.97%);
+  color: #fff;
+}
+
+.form_edit {
+  margin-top: 50px;
+}
