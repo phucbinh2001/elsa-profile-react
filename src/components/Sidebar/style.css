@@ -68,13 +68,13 @@
 }
 
 .main .container .menu_root ul li a:hover,
-.main .container .menu_root ul li.active {
+.main .container .menu_root ul li a.active {
   color: rgb(255, 255, 255);
   background: rgb(42, 42, 42);
 }
 
 .main .container .menu_root ul li a:hover .color,
-.main .container .menu_root ul li.active .color {
+.main .container .menu_root ul li a.active .color {
   background: #28a745 !important;
 }
 

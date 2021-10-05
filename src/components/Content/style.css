@@ -1,0 +1,120 @@
+.main .container .content .Page_root .Section_root1 {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.main .container .content .Page_root {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+.main .container .content .Page_root .Section_root1 .Card_root {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #d9dadc;
+  overflow: hidden;
+}
+
+.main .container .content .Page_root .Section_root1 .Card_children {
+  display: flex;
+  height: 220px;
+  -webkit-box-align: center;
+  align-items: center;
+  border: none;
+  background: linear-gradient(180deg, #ff52e3 -42.36%, #2980ff 166.67%);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.main .container .content .Page_root .Section_root1 .Card_name span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 66px;
+  color: #ffffff;
+}
+
+.main .container .content .Page_root .Section_root1 .Card_name {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  padding: var(--spacer-16);
+  color: rgb(255, 255, 255);
+  margin-left: 40px;
+}
+
+.main .container .content .Page_root .Section_root1 .Card_body {
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #ffffff;
+  background-color: var(--white);
+}
+
+.ColumnLayout__root {
+  padding: 10px;
+}
+
+.text_elsapro {
+  height: 60px;
+  padding-top: 15px;
+}
+.update_pro {
+  float: left;
+}
+
+.Section_root1 button {
+  position: relative;
+  width: 50%;
+  height: 60px;
+  float: right;
+  color: #fff;
+  font-size: 20px;
+  background: linear-gradient(180deg, #29f4ff -46.11%, #5257ff 151.97%);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.main .container .content .Page_root .Section_title {
+  margin-top: 50px;
+}
+
+.main .container .content .Page_root .Section_root .Table_Element {
+  border-collapse: collapse;
+  max-width: 100%;
+  text-align: left;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.main .container .content .Page_root .Section_root .TableRow_1 {
+  color: #a39f9f;
+  padding: 1em 1em 1em 0px;
+  white-space: nowrap;
+}
+
+.main .container .content .Page_root .Section_root .TableRow {
+  border-bottom: 1px solid var(--decorative-subdued, #dedede);
+}
+
+.main .container .content .Page_root .Section_root1 .core_lt img {
+  width: 100%;
+  height: auto;
+}
+
+.main .container .content .Page_root .Section_root1 .core_lt .img_core {
+  width: 47%;
+  float: left;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.main .container .content .Page_root .Section_root1 .core_lt .img_core.last {
+  margin-left: 5%;
+}

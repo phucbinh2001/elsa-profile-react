@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 function Sidebar() {
@@ -24,13 +25,10 @@ function Sidebar() {
               </a>
               <ul id="show_sub_menu" className="sub_menu">
                 <li>
-                  <a
-                    id="info_acount_btn"
-                    href="https://vn.elsaspeak.com/profile/"
-                  >
+                  <NavLink id="info_acount_btn" to="/profile">
                     <span className="sub_color"></span>
                     <span className="title_menu">Thông tin tài khoản</span>
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
                   <a
@@ -44,43 +42,40 @@ function Sidebar() {
               </ul>
             </li>
             <li>
-              <a id="core_elsa_btn" href="https://vn.elsaspeak.com/score/">
+              <NavLink id="info_acount_btn" to="/score">
                 <span className="color"></span>
                 <span className="icon">
                   <img src="https://vn.elsaspeak.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/theme-page-user-new/icon_sidebar/icon_4.png.webp" />
                 </span>
                 <span className="title">Điểm ELSA</span>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                id="purchased_course_btn"
-                href="https://vn.elsaspeak.com/new-package/"
-              >
+              <NavLink id="purchased_course_btn" to="/package">
                 <span className="color"></span>
                 <span className="icon">
                   <img src="https://vn.elsaspeak.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/theme-page-user-new/icon_sidebar/icon_3.png.webp" />
                 </span>
                 <span className="title">Gói Học</span>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a id="bill_btn" href="https://vn.elsaspeak.com/receipt/">
+              <NavLink id="bill_btn" to="/receipt">
                 <span className="color"></span>
                 <span className="icon">
                   <img src="https://vn.elsaspeak.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/theme-page-user-new/icon_sidebar/icon_5.png.webp" />
                 </span>
                 <span className="title">Hóa đơn</span>
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a id="redem_btn" href="https://vn.elsaspeak.com/redeem/">
+              <NavLink id="redem_btn" to="/redeem">
                 <span className="color"></span>
                 <span className="icon">
                   <img src="https://vn.elsaspeak.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/theme-page-user-new/icon_sidebar/icon_6.png.webp" />
                 </span>
                 <span className="title">Redeem code</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
