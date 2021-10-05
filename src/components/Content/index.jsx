@@ -10,7 +10,7 @@ import "./style.css";
 function Content() {
   return (
     <div id="free_acount" class="content fl_left">
-      <Route path="/" component={ProfilePage} />
+      <Route path="/" exact component={ProfilePage} />
       <Route path="/profile" component={ProfilePage} />
       <Route path="/score" component={ScorePage} />
       <Route path="/package" component={PackagePage} />
