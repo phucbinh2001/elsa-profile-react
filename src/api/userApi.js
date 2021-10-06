@@ -6,8 +6,9 @@ const userApi = {
     return axiosClient.get(url, { params });
   },
 
-  add(data) {
-    const url = "https://vn.elsaspeak.com/api/auth/login";
+  login(data) {
+    // const url = "https://vn-stag.elsaspeak.com/api/auth/login";
+    const url = "https://api.ezfrontend.com/auth/local";
     return axiosClient.post(url, data);
   },
 };

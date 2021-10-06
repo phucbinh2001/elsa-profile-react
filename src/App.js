@@ -1,21 +1,25 @@
-import { Container, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
+import { Redirect, Route, Switch } from "react-router";
 import "./App.css";
-import Content from "./components/Content";
+import Dashboard from "./components/Dashboard";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
 import LoginPage from "./Pages/Login";
 
 function App() {
+  const AccessToken = localStorage.getItem("ACCESS_TOKEN");
+
   return (
     <div class="App">
       <Header />
       <section className="main">
         <Container>
-          {/* <Row className="d-flex ">
-            <Sidebar />
-            <Content />
-          </Row> */}
-          <LoginPage />
+          <Switch>
+            <Route path="/login" exact component={LoginPage} />
+            <Route path="/">
+              {AccessToken != null ? <Dashboard /> : <Redirect to="/login" />}
+            </Route>
+          </Switch>
         </Container>
       </section>
     </div>
