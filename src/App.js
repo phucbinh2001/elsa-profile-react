@@ -3,6 +3,7 @@ import "./App.css";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import LoginPage from "./Pages/Login";
 
 function App() {
   return (
@@ -10,10 +11,11 @@ function App() {
       <Header />
       <section className="main">
         <Container>
-          <Row className="d-flex ">
+          {/* <Row className="d-flex ">
             <Sidebar />
             <Content />
-          </Row>
+          </Row> */}
+          <LoginPage />
         </Container>
       </section>
     </div>
