@@ -22,3 +22,7 @@
   margin-top: 18px;
   color: #111;
 }
+
+a {
+  cursor: pointer;
+}

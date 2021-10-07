@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router";
 import userApi from "../../api/userApi";
+import { logIn } from "./loginSlice";
 import "./style.css";
 
 function LoginPage() {
@@ -38,9 +40,12 @@ function LoginPage() {
     refresh_token: "12291121",
   };
 
+  const isLogin = useSelector((state) => state.isLogin);
+  const dispatch = useDispatch();
+
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [IsLogin, setIsLogin] = useState(false);
+  // const [IsLogin, setIsLogin] = useState(false);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -67,7 +72,9 @@ function LoginPage() {
     //lấy từ api
     localStorage.setItem("ACCESS_TOKEN", user.jwt);
     localStorage.setItem("USER_PROFILE", JSON.stringify(user.user));
-    setIsLogin(true);
+    // setIsLogin(true);
+    const action = logIn();
+    dispatch(action);
 
     //lấy từ res
     // localStorage.setItem("ACCESS_TOKEN", res.session);
@@ -77,7 +84,7 @@ function LoginPage() {
 
   return (
     <div className="form-container">
-      {IsLogin ? <Redirect to="/" /> : ""}
+      {isLogin ? <Redirect to="/" /> : ""}
       <h1 className="signin-label">Chào mừng bạn quay lại!</h1>
       <h1 className="signin-label">Đăng ký tài khoản ELSA thật đơn giản.</h1>
       <input

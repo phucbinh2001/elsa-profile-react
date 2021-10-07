@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
@@ -7,7 +7,9 @@ import Header from "./components/Header";
 import LoginPage from "./Pages/Login";
 
 function App() {
-  const AccessToken = localStorage.getItem("ACCESS_TOKEN");
+  // const AccessToken = localStorage.getItem("ACCESS_TOKEN");
+
+  const isLogin = useSelector((state) => state.isLogin);
 
   return (
     <div class="App">
@@ -17,7 +19,7 @@ function App() {
           <Switch>
             <Route path="/login" exact component={LoginPage} />
             <Route path="/">
-              {AccessToken != null ? <Dashboard /> : <Redirect to="/login" />}
+              {isLogin ? <Dashboard /> : <Redirect to="/login" />}
             </Route>
           </Switch>
         </Container>

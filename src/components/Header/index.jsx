@@ -1,14 +1,31 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
+import { logOut } from "../../Pages/Login/loginSlice";
 import "./style.css";
 
 function Header() {
+  const history = useHistory();
+  const dispatch = useDispatch();
+
+  const isLogin = useSelector((state) => state.isLogin);
+
+  const handleLogout = () => {
+    localStorage.removeItem("ACCESS_TOKEN");
+    localStorage.removeItem("USER_PROFILE");
+
+    const action = logOut();
+    dispatch(action);
+
+    history.push("/login");
+  };
+
   const renderLink = () => {
-    const accessToken = localStorage.getItem("accessToken");
-    if (accessToken) {
+    if (isLogin) {
       return (
-        <a href>
+        <a href onClick={handleLogout}>
           <span>Đăng xuất</span>
         </a>
       );
