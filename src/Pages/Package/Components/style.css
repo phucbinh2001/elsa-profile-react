@@ -102,3 +102,20 @@
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 990px) {
+  .ColumnLayout_0 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Section_children .span2 {
+    font-size: 30px;
+    line-height: 70px;
+  }
+
+  .btn_elsapro {
+    width: 65%;
+    height: 50px;
+  }
+}

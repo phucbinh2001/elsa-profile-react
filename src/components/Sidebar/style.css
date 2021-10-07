@@ -154,4 +154,14 @@
   .main .container .sidebar {
     min-height: 100vh;
   }
+
+  .main .container .sidebar {
+    width: 60%;
+    min-height: 150vh;
+    z-index: 999;
+  }
+
+  .main .container .menu_root ul li .title_menu {
+    margin-left: 10%;
+  }
 }

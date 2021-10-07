@@ -26,3 +26,18 @@
 a {
   cursor: pointer;
 }
+
+@media (max-width: 990px) {
+  .burger-menu {
+    position: absolute;
+    right: 12px;
+    transform: translateY(-3%);
+    background: transparent;
+    border: none;
+    font-size: 40px;
+  }
+
+  .log-in-link {
+    display: none;
+  }
+}

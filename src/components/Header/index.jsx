@@ -1,3 +1,4 @@
+import Button from "@restart/ui/esm/Button";
 import React from "react";
 import { Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
@@ -25,13 +26,13 @@ function Header() {
   const renderLink = () => {
     if (isLogin) {
       return (
-        <a href onClick={handleLogout}>
+        <a className="log-in-link" href onClick={handleLogout}>
           <span>Đăng xuất</span>
         </a>
       );
     } else {
       return (
-        <a href>
+        <a className="log-in-link" href>
           <span>Đăng ký</span>
         </a>
       );
@@ -48,6 +49,9 @@ function Header() {
             />
           </Link>
           {renderLink()}
+          <Button className="burger-menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </Button>
         </Col>
       </div>
     </header>

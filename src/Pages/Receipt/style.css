@@ -31,3 +31,31 @@
   background: #ffff;
   border-bottom: 2px solid #ececec;
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .content-table tbody td {
+    text-align: right;
+    margin-top: -43px;
+  }
+
+  .content-table tbody th {
+    display: block;
+    color: #919496;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .group {
+    margin-bottom: 5px;
+  }
+
+  .Section_children_hd.desktop {
+    display: none !important;
+  }
+}
