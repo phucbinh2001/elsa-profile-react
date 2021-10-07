@@ -1,19 +1,31 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { setStatus } from "../Header/headerSlice";
 import "./style.css";
 
 function Sidebar() {
   const [active, setActive] = useState(false);
-  // let activeClass = "";
+  const isMenuOpen = useSelector((state) => state.isOpenMenu);
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     setActive(!active);
-    // activeClass = active ? "active" : "";
-    // alert(activeClass);
+  };
+
+  const closeMenu = () => {
+    const action = setStatus(true);
+    dispatch(action);
   };
 
   return (
-    <div className="navigation sidebar fl_left">
+    <div
+      className={
+        isMenuOpen
+          ? "active navigation sidebar fl_left"
+          : "navigation sidebar fl_left"
+      }
+    >
       <div className="menu_root">
         <div className="menu_avatar">
           <img
@@ -21,7 +33,7 @@ function Sidebar() {
             alt=""
           />
         </div>
-        <div>
+        <div onClick={closeMenu}>
           <ul className="menu_list">
             <li onClick={handleClick} className={active ? "active" : ""}>
               <a>

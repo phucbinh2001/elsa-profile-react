@@ -27,12 +27,18 @@ a {
   cursor: pointer;
 }
 
+.burger-menu {
+  display: none;
+}
+
 @media (max-width: 990px) {
   .burger-menu {
+    display: block;
     position: absolute;
     right: 12px;
-    transform: translateY(-3%);
+    transform: translateY(15%);
     background: transparent;
+    top: 0;
     border: none;
     font-size: 40px;
   }

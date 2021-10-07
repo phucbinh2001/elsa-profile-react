@@ -60,26 +60,20 @@ function LoginPage() {
   const data = {
     // email: "quochung.030997@gmail.com",
     // password: "tra215413199",
-    identifier: Email, // can be either username or email
+    email: Email, // can be either username or email
     password: Password,
-    // identifier: "abc@gmail.com", // can be either username or email
-    // password: "123123",
   };
   const handleSubmit = async () => {
     const user = await userApi.login(data);
-    // console.log(user);
 
-    //lấy từ api
-    localStorage.setItem("ACCESS_TOKEN", user.jwt);
-    localStorage.setItem("USER_PROFILE", JSON.stringify(user.user));
-    // setIsLogin(true);
+    localStorage.setItem("ACCESS_TOKEN", user.session);
+    localStorage.setItem("USER_PROFILE", JSON.stringify(user.profile));
+
+    // localStorage.setItem("ACCESS_TOKEN", user.jwt);
+    // localStorage.setItem("USER_PROFILE", JSON.stringify(user.user));
+
     const action = logIn();
     dispatch(action);
-
-    //lấy từ res
-    // localStorage.setItem("ACCESS_TOKEN", res.session);
-    // localStorage.setItem("USER_PROFILE", JSON.stringify(res.profile));
-    // alert("da tai");
   };
 
   return (

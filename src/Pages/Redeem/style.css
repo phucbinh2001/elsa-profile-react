@@ -103,7 +103,7 @@
     font-size: 13px;
   }
 
-  .form_edit .btn_group button {
+  .form_edit .btn_group .btn_submit_code {
     width: 60%;
     transform: translateX(-50%) translateY(-30px);
     margin-left: 50%;

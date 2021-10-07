@@ -5,11 +5,17 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { logOut } from "../../Pages/Login/loginSlice";
+import { setStatus } from "./headerSlice";
 import "./style.css";
 
 function Header() {
   const history = useHistory();
   const dispatch = useDispatch();
+
+  const handleMenu = () => {
+    const action = setStatus();
+    dispatch(action);
+  };
 
   const isLogin = useSelector((state) => state.isLogin);
 
@@ -49,7 +55,7 @@ function Header() {
             />
           </Link>
           {renderLink()}
-          <Button className="burger-menu">
+          <Button className="burger-menu" onClick={handleMenu}>
             <i class="fa fa-bars" aria-hidden="true"></i>
           </Button>
         </Col>

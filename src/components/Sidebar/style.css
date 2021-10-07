@@ -148,8 +148,14 @@
 
 @media (max-width: 990px) {
   .main .container .navigation {
-    visibility: hidden;
+    /* visibility: hidden; */
+    margin-left: -100%;
     position: absolute;
+    transition: 0.4s;
+  }
+
+  .main .container .navigation.active {
+    margin-left: 0;
   }
   .main .container .sidebar {
     min-height: 100vh;
@@ -163,5 +169,9 @@
 
   .main .container .menu_root ul li .title_menu {
     margin-left: 10%;
+  }
+
+  .sub_menu {
+    display: block;
   }
 }
